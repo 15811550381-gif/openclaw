@@ -169,7 +169,8 @@ validate_mount_spec() {
 }
 
 require_cmd docker
-if ! docker compose version >/dev/null 2>&1; then
+if ! docker-compose version >/dev/null 2>&1; then
+#if ! docker compose version >/dev/null 2>&1; then
   echo "Docker Compose not available (try: docker compose version)" >&2
   exit 1
 fi
